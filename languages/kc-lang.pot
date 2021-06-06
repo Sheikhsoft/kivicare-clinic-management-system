@@ -1,0 +1,580 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: BestAid - Medical dashboard\n"
+"POT-Creation-Date: 2020-10-15 11:44+0530\n"
+"PO-Revision-Date: 2020-10-15 11:43+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: BestAid-clinic-management-system.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: app/baseClasses/KCActivate.php:62
+msgid "Login has been disabled. please contact you system administrator. "
+msgstr ""
+
+#: app/baseClasses/KCActivate.php:69
+msgid "BestAid"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:34
+#: app/controllers/KCAppointmentController.php:145
+#: app/controllers/KCAppointmentController.php:240
+#: app/controllers/KCAppointmentController.php:291
+#: app/controllers/KCClinicController.php:35
+#: app/controllers/KCClinicController.php:74
+#: app/controllers/KCClinicController.php:193
+#: app/controllers/KCClinicController.php:365
+#: app/controllers/KCClinicScheduleController.php:42
+#: app/controllers/KCCustomFieldController.php:36
+#: app/controllers/KCCustomFieldController.php:66
+#: app/controllers/KCCustomFieldController.php:140
+#: app/controllers/KCCustomFieldController.php:200
+#: app/controllers/KCDoctorController.php:31
+#: app/controllers/KCDoctorController.php:104
+#: app/controllers/KCDoctorController.php:254
+#: app/controllers/KCDoctorController.php:337
+#: app/controllers/KCPatientBillController.php:43
+#: app/controllers/KCPatientBillController.php:87
+#: app/controllers/KCPatientBillController.php:207
+#: app/controllers/KCPatientBillController.php:290
+#: app/controllers/KCPatientBillController.php:399
+#: app/controllers/KCPatientBillController.php:487
+#: app/controllers/KCPatientController.php:35
+#: app/controllers/KCPatientController.php:110
+#: app/controllers/KCPatientController.php:217
+#: app/controllers/KCPatientController.php:279
+#: app/controllers/KCPatientEncounterController.php:44
+#: app/controllers/KCPatientEncounterController.php:112
+#: app/controllers/KCPatientEncounterController.php:194
+#: app/controllers/KCPatientEncounterController.php:282
+#: app/controllers/KCPatientEncounterController.php:369
+#: app/controllers/KCPatientMedicalHistoryController.php:40
+#: app/controllers/KCPatientMedicalHistoryController.php:87
+#: app/controllers/KCPatientMedicalHistoryController.php:158
+#: app/controllers/KCPatientMedicalRecordsController.php:36
+#: app/controllers/KCPatientMedicalRecordsController.php:100
+#: app/controllers/KCPatientMedicalRecordsController.php:171
+#: app/controllers/KCPatientMedicalRecordsController.php:260
+#: app/controllers/KCPatientPrescriptionController.php:36
+#: app/controllers/KCPatientPrescriptionController.php:92
+#: app/controllers/KCPatientPrescriptionController.php:173
+#: app/controllers/KCPatientPrescriptionController.php:238
+#: app/controllers/KCReceptionistController.php:33
+#: app/controllers/KCReceptionistController.php:108
+#: app/controllers/KCReceptionistController.php:238
+#: app/controllers/KCReceptionistController.php:301
+#: app/controllers/KCServiceController.php:34
+#: app/controllers/KCServiceController.php:103
+#: app/controllers/KCServiceController.php:169
+#: app/controllers/KCServiceController.php:239
+#: app/controllers/KCStaticDataController.php:47
+#: app/controllers/KCStaticDataController.php:101
+#: app/controllers/KCStaticDataController.php:152
+#: app/controllers/KCStaticDataController.php:203
+msgid "You don't have a permission to access"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:126
+msgid "No appointments found"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:134
+msgid "Appointment list"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:165
+#: app/controllers/KCServiceController.php:123
+msgid "Status is required"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:166
+msgid "Patient is required"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:167
+#: app/controllers/KCAppointmentController.php:361
+msgid "Clinic is required"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:168
+#: app/controllers/KCAppointmentController.php:362
+msgid "Doctor is required"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:251
+#: app/controllers/KCAppointmentController.php:264
+#: app/controllers/KCClinicController.php:204
+#: app/controllers/KCClinicController.php:341
+#: app/controllers/KCClinicController.php:376
+#: app/controllers/KCClinicController.php:391
+#: app/controllers/KCClinicScheduleController.php:151
+#: app/controllers/KCClinicScheduleController.php:196
+#: app/controllers/KCClinicScheduleController.php:237
+#: app/controllers/KCCustomFieldController.php:151
+#: app/controllers/KCCustomFieldController.php:176
+#: app/controllers/KCCustomFieldController.php:211
+#: app/controllers/KCDoctorController.php:275
+#: app/controllers/KCDoctorController.php:317
+#: app/controllers/KCDoctorController.php:354
+#: app/controllers/KCDoctorController.php:373
+#: app/controllers/KCHomeController.php:182
+#: app/controllers/KCPatientBillController.php:218
+#: app/controllers/KCPatientBillController.php:265
+#: app/controllers/KCPatientBillController.php:373
+#: app/controllers/KCPatientBillController.php:410
+#: app/controllers/KCPatientBillController.php:450
+#: app/controllers/KCPatientBillController.php:498
+#: app/controllers/KCPatientController.php:228
+#: app/controllers/KCPatientController.php:255
+#: app/controllers/KCPatientController.php:290
+#: app/controllers/KCPatientController.php:307
+#: app/controllers/KCPatientEncounterController.php:205
+#: app/controllers/KCPatientEncounterController.php:252
+#: app/controllers/KCPatientEncounterController.php:293
+#: app/controllers/KCPatientEncounterController.php:331
+#: app/controllers/KCPatientEncounterController.php:453
+#: app/controllers/KCPatientMedicalHistoryController.php:169
+#: app/controllers/KCPatientMedicalRecordsController.php:182
+#: app/controllers/KCPatientMedicalRecordsController.php:235
+#: app/controllers/KCPatientMedicalRecordsController.php:271
+#: app/controllers/KCPatientPrescriptionController.php:184
+#: app/controllers/KCPatientPrescriptionController.php:214
+#: app/controllers/KCPatientPrescriptionController.php:249
+#: app/controllers/KCReceptionistController.php:249
+#: app/controllers/KCReceptionistController.php:277
+#: app/controllers/KCReceptionistController.php:312
+#: app/controllers/KCReceptionistController.php:329
+#: app/controllers/KCServiceController.php:180
+#: app/controllers/KCServiceController.php:215
+#: app/controllers/KCServiceController.php:250
+#: app/controllers/KCStaticDataController.php:163
+#: app/controllers/KCStaticDataController.php:179
+#: app/controllers/KCStaticDataController.php:214
+#: app/controllers/KCStaticDataController.php:230
+msgid "Data not found"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:261
+msgid "Appointment has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:330
+msgid "Appointment status has been updated successfully"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:381
+msgid "Appointment slots"
+msgstr ""
+
+#: app/controllers/KCAppointmentController.php:502
+msgid "Appointments"
+msgstr ""
+
+#: app/controllers/KCAuthController.php:45
+msgid "Incorrect username and password"
+msgstr ""
+
+#: app/controllers/KCAuthController.php:54
+msgid "Logged in successfully"
+msgstr ""
+
+#: app/controllers/KCBookAppointmentWidgetController.php:58
+msgid "Doctor details"
+msgstr ""
+
+#: app/controllers/KCBookAppointmentWidgetController.php:78
+msgid "Time slots"
+msgstr ""
+
+#: app/controllers/KCBookAppointmentWidgetController.php:81
+msgid "Doctor is not available for this date"
+msgstr ""
+
+#: app/controllers/KCBookAppointmentWidgetController.php:99
+msgid "Sign in to book appointment"
+msgstr ""
+
+#: app/controllers/KCBookAppointmentWidgetController.php:105
+msgid "User must be patient to book appointment"
+msgstr ""
+
+#: app/controllers/KCBookAppointmentWidgetController.php:132
+msgid "Appointment has been booked successfully"
+msgstr ""
+
+#: app/controllers/KCClinicController.php:55
+msgid "No clinics found"
+msgstr ""
+
+#: app/controllers/KCClinicController.php:176
+msgid "Clinic has been saved successfully"
+msgstr ""
+
+#: app/controllers/KCClinicController.php:337
+msgid "Clinic data"
+msgstr ""
+
+#: app/controllers/KCClinicController.php:388
+msgid "Clinic has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCClinicScheduleController.php:82
+msgid "No clinic schedule found"
+msgstr ""
+
+#: app/controllers/KCClinicScheduleController.php:90
+#: app/controllers/KCServiceController.php:91
+msgid "Service list"
+msgstr ""
+
+#: app/controllers/KCClinicScheduleController.php:192
+#: app/controllers/KCStaticDataController.php:175
+msgid "Static data"
+msgstr ""
+
+#: app/controllers/KCClinicScheduleController.php:234
+msgid "Clinic schedule has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCClinicScheduleController.php:267
+#: app/controllers/KCStaticDataController.php:260
+msgid "Terms & Condition has been saved successfully"
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:47
+msgid "No custom fields found"
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:55
+msgid "Custom fields records"
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:113
+msgid "Custom fields for this type in already exist."
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:120
+msgid "Custom fields has been saved successfully"
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:124
+msgid "Custom fields has been updated successfully"
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:172
+msgid "Custom field record"
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:221
+msgid "Custom field has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCCustomFieldController.php:224
+msgid "Custom field delete failed"
+msgstr ""
+
+#: app/controllers/KCDoctorController.php:64
+#: app/controllers/KCSetupController.php:305
+#: app/controllers/KCSetupController.php:324
+msgid "No doctors found"
+msgstr ""
+
+#: app/controllers/KCDoctorController.php:94
+msgid "Doctors list"
+msgstr ""
+
+#: app/controllers/KCDoctorController.php:239
+#: app/controllers/KCSetupController.php:205
+msgid "Doctor data save operation has been failed"
+msgstr ""
+
+#: app/controllers/KCDoctorController.php:370
+msgid "Doctor has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCHomeController.php:31
+msgid "Logout successfully."
+msgstr ""
+
+#: app/controllers/KCHomeController.php:42
+msgid "Datatype not found"
+msgstr ""
+
+#: app/controllers/KCHomeController.php:167
+msgid "Datatype found"
+msgstr ""
+
+#: app/controllers/KCHomeController.php:200
+msgid "Custom fields"
+msgstr ""
+
+#: app/controllers/KCHomeController.php:260
+msgid "User data"
+msgstr ""
+
+#: app/controllers/KCHomeController.php:330
+msgid "admin dashboard"
+msgstr ""
+
+#: app/controllers/KCHomeController.php:377
+msgid "weekly appointment"
+msgstr ""
+
+#: app/controllers/KCModuleController.php:107
+msgid "Module configuration updated successfully"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:55
+#: app/controllers/KCPatientEncounterController.php:345
+#: app/controllers/KCPatientEncounterController.php:461
+#: app/controllers/KCPatientMedicalHistoryController.php:51
+#: app/controllers/KCPatientMedicalRecordsController.php:47
+#: app/controllers/KCPatientPrescriptionController.php:47
+msgid "Encounter not found"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:67
+msgid "No bills records found"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:76
+#: app/controllers/KCPatientMedicalRecordsController.php:88
+msgid "Medical records"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:119
+#: app/controllers/KCPatientMedicalHistoryController.php:117
+#: app/controllers/KCPatientMedicalRecordsController.php:131
+#: app/controllers/KCPatientPrescriptionController.php:123
+msgid "No encounter found"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:358
+msgid "Bill item"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:367
+msgid "Bill not found"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:422
+#: app/controllers/KCPatientBillController.php:460
+msgid "Bill item has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:425
+#: app/controllers/KCPatientBillController.php:463
+msgid "Bill item delete failed"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:506
+msgid "Payment status has been updated successfully"
+msgstr ""
+
+#: app/controllers/KCPatientBillController.php:509
+msgid "update status process failed"
+msgstr ""
+
+#: app/controllers/KCPatientController.php:63
+msgid "No patient found"
+msgstr ""
+
+#: app/controllers/KCPatientController.php:92
+msgid "Patient list"
+msgstr ""
+
+#: app/controllers/KCPatientController.php:304
+msgid "Patient has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCPatientEncounterController.php:381
+msgid "encounter id not found"
+msgstr ""
+
+#: app/controllers/KCPatientEncounterController.php:407
+msgid "Encounter data has been saved"
+msgstr ""
+
+#: app/controllers/KCPatientEncounterController.php:473
+msgid "Encounter status has been updated"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalHistoryController.php:68
+msgid "No medical history found"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalHistoryController.php:76
+msgid "Medical history"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalHistoryController.php:145
+msgid "Medical history has been saved successfully"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalHistoryController.php:179
+msgid "Medical history has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalHistoryController.php:182
+msgid "Medical history delete failed"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalRecordsController.php:80
+msgid "No medical records found"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalRecordsController.php:160
+msgid "Medical record has been saved successfully"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalRecordsController.php:281
+msgid "Medical record has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCPatientMedicalRecordsController.php:284
+msgid "Medical record delete failed"
+msgstr ""
+
+#: app/controllers/KCPatientPrescriptionController.php:72
+msgid "No prescription found"
+msgstr ""
+
+#: app/controllers/KCPatientPrescriptionController.php:80
+msgid "Prescription records"
+msgstr ""
+
+#: app/controllers/KCPatientPrescriptionController.php:210
+msgid "Prescription record"
+msgstr ""
+
+#: app/controllers/KCPatientPrescriptionController.php:259
+msgid "Prescription has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCPatientPrescriptionController.php:262
+msgid "Prescription delete failed"
+msgstr ""
+
+#: app/controllers/KCReceptionistController.php:60
+#: app/controllers/KCSetupController.php:388
+msgid "No receptionist found"
+msgstr ""
+
+#: app/controllers/KCReceptionistController.php:89
+msgid "Receptionist list"
+msgstr ""
+
+#: app/controllers/KCReceptionistController.php:215
+#: app/controllers/KCSetupController.php:561
+msgid "Receptionist data save operation has been failed"
+msgstr ""
+
+#: app/controllers/KCReceptionistController.php:326
+msgid "Receptionist has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCReceptionistController.php:390
+msgid "Email has been changed"
+msgstr ""
+
+#: app/controllers/KCServiceController.php:83
+#: app/controllers/KCStaticDataController.php:81
+msgid "No services found"
+msgstr ""
+
+#: app/controllers/KCServiceController.php:120
+msgid "Name is required"
+msgstr ""
+
+#: app/controllers/KCServiceController.php:121
+#: app/controllers/KCServiceController.php:122
+msgid "Price is required"
+msgstr ""
+
+#: app/controllers/KCServiceController.php:210
+msgid "Service data"
+msgstr ""
+
+#: app/controllers/KCServiceController.php:260
+msgid "Service has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCServiceController.php:263
+msgid "Service delete failed"
+msgstr ""
+
+#: app/controllers/KCSetupController.php:279
+msgid "Clinic session has been saved successfully"
+msgstr ""
+
+#: app/controllers/KCSetupController.php:447
+msgid "Setup step found"
+msgstr ""
+
+#: app/controllers/KCSetupController.php:568
+msgid "Receptionist has been saved successfully"
+msgstr ""
+
+#: app/controllers/KCSetupController.php:584
+msgid "Clinic Setup steps is completed successfully."
+msgstr ""
+
+#: app/controllers/KCSetupController.php:590
+msgid "Clinic Setup is not completed successfully."
+msgstr ""
+
+#: app/controllers/KCSetupController.php:613
+msgid "Completed step."
+msgstr ""
+
+#: app/controllers/KCStaticDataController.php:126
+msgid "Similar value is already exists in database"
+msgstr ""
+
+#: app/controllers/KCStaticDataController.php:227
+msgid "Static data has been deleted successfully"
+msgstr ""
+
+#: app/controllers/KCStaticDataController.php:299
+msgid "Email template not saved."
+msgstr ""
+
+#: app/controllers/KCStaticDataController.php:307
+msgid "Email template saved successfully."
+msgstr ""
+
+#: app/controllers/KCStaticDataController.php:312
+msgid "Email template not saved successfully."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "BestAid - Medical dashboard"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://iqonic.design"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "This is the very first plugin I ever created."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "iqonic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://iqonic.design/"
+msgstr ""

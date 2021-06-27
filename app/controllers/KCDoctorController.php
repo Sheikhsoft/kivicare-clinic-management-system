@@ -32,7 +32,6 @@ class KCDoctorController extends KCBase
         $this->db = $wpdb;
 
         $this->request = new KCRequest();
-
     }
 
     public function index()
@@ -68,7 +67,6 @@ class KCDoctorController extends KCBase
 
         if (current_user_can('administrator')) {
             $doctors = get_users($args);
-
         } else {
             $user_id = get_current_user_id();
             switch ($this->getLoginUserRole()) {
@@ -164,7 +162,7 @@ class KCDoctorController extends KCBase
         $request_data = $this->request->getInputs();
         $request_data['specialties'] = json_decode(stripslashes($request_data['specialties']));
         $request_data['qualifications'] = json_decode(stripslashes($request_data['qualifications']));
-        $request_data['clinic_id'] = json_decode(stripslashes( $request_data['clinic_id']));
+        $request_data['clinic_id'] = json_decode(stripslashes($request_data['clinic_id']));
         $rules = [
             'first_name' => 'required',
             'last_name' => 'required',
@@ -213,7 +211,7 @@ class KCDoctorController extends KCBase
         }
 
         if (!isset($request_data['ID'])) {
-            $user = wp_create_user($username, $password, $request_data['user_email']);
+            $user = wp_create_user($username, $request_data['mobile_number'], $request_data['user_email']);
 
             $u = new WP_User($user);
             $u->display_name = $request_data['first_name'] . ' ' . $request_data['last_name'];
@@ -228,15 +226,15 @@ class KCDoctorController extends KCBase
                 $clinic_id = (new KCReceptionistClinicMapping())->get_by(['receptionist_id' => $receptionis_id]);
                 $request_data['clinic_id'] = $clinic_id[0]->clinic_id;
             }
-            if($this->getLoginUserRole() == 'kiviCare_clinic_admin'){
-                $clinic = (new KCClinic())->get_by([ 'clinic_admin_id' => get_current_user_id()]);
+            if ($this->getLoginUserRole() == 'kiviCare_clinic_admin') {
+                $clinic = (new KCClinic())->get_by(['clinic_admin_id' => get_current_user_id()]);
                 $request_data['clinic_id'] = $clinic[0]->id;
             }
 
             // Insert Doctor Clinic mapping...
             $doctor_mapping = new KCDoctorClinicMapping;
             if ($active_domain === $this->kiviCareProOnName()) {
-              $request_data['clinic_id'] = str_replace('\\', '', $request_data['clinic_id']);
+                $request_data['clinic_id'] = str_replace('\\', '', $request_data['clinic_id']);
                 if (gettype($request_data['clinic_id']) === 'array') {
                     foreach ($request_data['clinic_id'] as $value) {
                         $new_temp = [
@@ -247,8 +245,7 @@ class KCDoctorController extends KCBase
                         ];
                         $doctor_mapping->insert($new_temp);
                     }
-
-                }else{
+                } else {
                     $new_temp = [
                         'doctor_id' => $user_id,
                         'clinic_id' => isset($request_data['clinic_id']) ? $request_data['clinic_id'] : 1,
@@ -265,20 +262,19 @@ class KCDoctorController extends KCBase
                     'created_at' => current_time('Y-m-d H:i:s')
                 ];
                 $doctor_mapping->insert($new_temp);
-
             }
-            update_user_meta($user, 'first_name',$request_data['first_name'] );
-			update_user_meta($user, 'last_name', $request_data['last_name'] );
-			
+            update_user_meta($user, 'first_name', $request_data['first_name']);
+            update_user_meta($user, 'last_name', $request_data['last_name']);
+
             update_user_meta($user, 'basic_data', json_encode($temp, JSON_UNESCAPED_UNICODE));
-            $request_data['custom_fields'] = json_decode(stripslashes( $request_data['custom_fields']));
+            $request_data['custom_fields'] = json_decode(stripslashes($request_data['custom_fields']));
             if (isset($request_data['custom_fields']) && $request_data['custom_fields'] !== []) {
 
                 kvSaveCustomFields('doctor_module', $user, $request_data['custom_fields']);
             }
 
             // telemed service charges
-            if(isset($request_data['enableTeleMed'])) {
+            if (isset($request_data['enableTeleMed'])) {
 
                 $data['type'] = 'Telemed';
 
@@ -287,7 +283,6 @@ class KCDoctorController extends KCBase
                 if (isset($telemed_service_id[0])) {
 
                     $telemed_Service = $telemed_service_id[0]->id;
-
                 } else {
 
                     $service_data = new KCService;
@@ -301,7 +296,6 @@ class KCDoctorController extends KCBase
                     ];
 
                     $telemed_Service = $service_data->insert($services);
-
                 }
 
                 $service_doctor_mapping->insert([
@@ -317,7 +311,6 @@ class KCDoctorController extends KCBase
                     'api_key' => $request_data['api_key'],
                     'api_secret' => $request_data['api_secret']
                 ]);
-
             }
 
             $user_email_param = array(
@@ -330,7 +323,6 @@ class KCDoctorController extends KCBase
             kcSendEmail($user_email_param);
 
             $message = 'Doctor has been saved successfully';
-
         } else {
 
             $doctor_mapping = new KCDoctorClinicMapping;
@@ -357,12 +349,12 @@ class KCDoctorController extends KCBase
                     $doctor_mapping->insert($new_temp);
                 }
             }
-            update_user_meta($request_data['ID'], 'first_name',$request_data['first_name'] );
-			update_user_meta($request_data['ID'], 'last_name', $request_data['last_name'] );
-			
+            update_user_meta($request_data['ID'], 'first_name', $request_data['first_name']);
+            update_user_meta($request_data['ID'], 'last_name', $request_data['last_name']);
+
             update_user_meta($request_data['ID'], 'basic_data', json_encode($temp, JSON_UNESCAPED_UNICODE));
 
-            if(isset($request_data['enableTeleMed'])) {
+            if (isset($request_data['enableTeleMed'])) {
 
                 $data['type'] = 'Telemed';
 
@@ -371,7 +363,6 @@ class KCDoctorController extends KCBase
                 if (isset($telemed_service_id[0])) {
 
                     $telemed_Service = $telemed_service_id[0]->id;
-
                 } else {
 
                     $service_data = new KCService;
@@ -396,7 +387,6 @@ class KCDoctorController extends KCBase
                         'clinic_id' => kcGetDefaultClinicId(),
                         'doctor_id' => $user_id
                     ]);
-
                 } else {
 
                     $service_doctor_mapping->insert([
@@ -405,7 +395,6 @@ class KCDoctorController extends KCBase
                         'doctor_id' => $user_id,
                         'charges' => $temp['video_price']
                     ]);
-
                 }
 
                 apply_filters('kct_save_zoom_configuration', [
@@ -414,14 +403,12 @@ class KCDoctorController extends KCBase
                     'api_key' => $request_data['api_key'],
                     'api_secret' => $request_data['api_secret']
                 ]);
-
             }
-            $request_data['custom_fields'] = json_decode(stripslashes( $request_data['custom_fields']));
+            $request_data['custom_fields'] = json_decode(stripslashes($request_data['custom_fields']));
             if (isset($request_data['custom_fields']) && $request_data['custom_fields'] !== []) {
                 kvSaveCustomFields('doctor_module', $request_data['ID'], $request_data['custom_fields']);
             }
             $message = 'Doctor has been updated successfully';
-
         }
 
         if ($user_id) {
@@ -430,9 +417,9 @@ class KCDoctorController extends KCBase
             $wpdb->update($user_table_name, ['user_status' => $user_status], ['ID' => $user_id]);
         }
 
-        if($request_data['profile_image'] != '' && isset($request_data['profile_image']) && $request_data['profile_image'] != null ){
+        if ($request_data['profile_image'] != '' && isset($request_data['profile_image']) && $request_data['profile_image'] != null) {
             $attachment_id = media_handle_upload('profile_image', 0);
-            update_user_meta( $user_id, 'doctor_profile_image',  $attachment_id  );
+            update_user_meta($user_id, 'doctor_profile_image',  $attachment_id);
         }
 
         if ($user->errors) {
@@ -471,7 +458,7 @@ class KCDoctorController extends KCBase
 
         $request_data = $this->request->getInputs();
         $table_name = collect((new KCClinic)->get_all());
-        
+
         try {
 
             if (!isset($request_data['id'])) {
@@ -480,7 +467,7 @@ class KCDoctorController extends KCBase
 
             $id = $request_data['id'];
 
-            $image_attachment_id = get_user_meta($id,'doctor_profile_image',true);
+            $image_attachment_id = get_user_meta($id, 'doctor_profile_image', true);
             $user_image_url = wp_get_attachment_url($image_attachment_id);
             $clinics = collect((new KCDoctorClinicMapping)->get_by(['doctor_id' => $id]))->pluck('clinic_id')->toArray();
             $clinics = $table_name->whereIn('id', $clinics);
@@ -527,9 +514,9 @@ class KCDoctorController extends KCBase
                 $data->api_secret = $config_data['data']->api_secret;
                 $data->zoom_id = $config_data['data']->zoom_id;
             }
-           
+
             $custom_filed = kcGetCustomFields('doctor_module', $id);
-            $data->user_profile =$user_image_url;
+            $data->user_profile = $user_image_url;
             if ($data) {
                 echo json_encode([
                     'status' => true,
@@ -537,15 +524,11 @@ class KCDoctorController extends KCBase
                     'id' => $id,
                     'user_data' => $user_data,
                     'data' => $data,
-                    'custom_filed'=>$custom_filed
+                    'custom_filed' => $custom_filed
                 ]);
-
-
             } else {
                 throw new Exception(esc_html__('Data not found', 'kc-lang'), 400);
             }
-
-
         } catch (Exception $e) {
 
             $code = esc_html__($e->getCode(), 'kc-lang');
@@ -605,8 +588,6 @@ class KCDoctorController extends KCBase
             } else {
                 throw new Exception(esc_html__('Data not found', 'kc-lang'), 400);
             }
-
-
         } catch (Exception $e) {
 
             $code = esc_html__($e->getCode(), 'kc-lang');
@@ -668,13 +649,11 @@ class KCDoctorController extends KCBase
                                         'appointment_end_time' => $appointment_end_time
                                     ], ['id' => $appointment->id]);
                                 }
-
                             }
                         }
                     }
                 }
             }
-
         }
     }
 }

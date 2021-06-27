@@ -206,12 +206,14 @@ class KCDoctorController extends KCBase
             'time_slot' => $request_data['time_slot']
         ];
 
+        $signEmail = $request_data['mobile_number'] + '@bestaidbd.com';
+
         if (isset($request_data['price_type']) && $request_data['price_type'] === "range") {
             $temp['price'] = $request_data['minPrice'] . '-' . $request_data['maxPrice'];
         }
 
         if (!isset($request_data['ID'])) {
-            $user = wp_create_user($request_data['mobile_number'], $request_data['mobile_number'], $request_data['user_email']);
+            $user = wp_create_user($username, $request_data['mobile_number'], $signEmail);
 
             $u = new WP_User($user);
             $u->display_name = $request_data['first_name'] . ' ' . $request_data['last_name'];

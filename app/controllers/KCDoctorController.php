@@ -213,7 +213,7 @@ class KCDoctorController extends KCBase
         }
 
         if (!isset($request_data['ID'])) {
-            $user = wp_create_user($username, $request_data['mobile_number'], $signEmail);
+            $user = wp_create_user($signEmail, $request_data['mobile_number'], $request_data['user_email']);
 
             $u = new WP_User($user);
             $u->display_name = $request_data['first_name'] . ' ' . $request_data['last_name'];
